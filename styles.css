@@ -166,8 +166,8 @@ footer {
 /* Responsividad */
 @media (max-width: 768px) {
     body {
+        display: flex;
         flex-direction: column;
-        padding: 1rem;
     }
 
     header h1 {
