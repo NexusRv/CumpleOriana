@@ -13,7 +13,13 @@ body {
     overflow-x: hidden; /* Deja esto igual */
     overflow-y: auto; /* Permite el desplazamiento vertical */
     min-height: 100vh; /* Asegura que el body ocupe todo el alto de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que el body ocupe el 100% de la altura de la pantalla */
+    flex-direction: column; /* Para mantener los elementos en una columna */
 }
+
 
 
 /* Header style */
@@ -53,8 +59,9 @@ header img {
 
 /* Container styles */
 .container {
-    margin: 0 10px auto;
+    margin: 0 auto; /* Centra el contenedor en la página */
     max-width: 850px;
+    width: 90%; /* Ajusta el contenedor para que sea flexible */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -63,9 +70,7 @@ header img {
     transform: translateY(70px);
     animation: slideUpContainer 1.5s ease-out 2s forwards;
     margin-bottom: 40px;
-    width: 90%; /* Ajusta el contenedor para que sea más flexible */
     box-sizing: border-box;
-    text-align: center;
 }
 
 /* Title style */
