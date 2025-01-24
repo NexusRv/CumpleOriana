@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Cumpleaños</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hello+Paris&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Hello Paris', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f2;
+            color: #555;
+            text-align: center;
+            background-image: url('assets/Marie fondo.jpeg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ffb6c1, #fff);
+            padding: 50px;
+            border-bottom: 5px solid #f3a3c0;
+            position: relative;
+            opacity: 0;
+            animation: fadeInHeader 1.5s ease-out forwards;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 4em;
+            color: #ff69b4;
+            margin: 0;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+                         -2px -2px 4px rgba(0, 0, 0, 0.6),
+                         2px -2px 4px rgba(0, 0, 0, 0.6),
+                         -2px 2px 4px rgba(0, 0, 0, 0.6);
+            transform: translateY(60px);
+            animation: slideUp 1.5s ease-out forwards;
+            width: 100%;
+        }
+
+        header img {
+            width: 400px;
+            margin: 20px auto;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            animation: fadeInImage 1.5s 1s forwards;
+        }
+
+        .container {
+            margin: 0 10px auto;
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(70px);
+            animation: slideUpContainer 1.5s ease-out 2s forwards;
+            margin-bottom: 40px;
+            width: 90%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 3em;
+            color: #ff69b4;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInHeading 1.5s ease-out 2s forwards;
+            text-align: center;
+        }
+
+        .details {
+            font-size: 1.8em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #333;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInDetails 1.5s ease-out 2.5s forwards;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff69b4;
+            color: #fff;
+            padding: 18px 35px;
+            font-size: 1.8em;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background-color 0.3s;
+            margin-top: 30px;
+            width: auto;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #ff85c1;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #777;
+            font-size: 1.3em;
+        }
+
+        /* Animations */
+        @keyframes fadeInHeader {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(60px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInImage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUpContainer {
+            0% { transform: translateY(70px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInHeading {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDetails {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+
+            .container {
+                padding: 30px;
+                max-width: 100%;
+                width: 90%;
+            }
+
+            .details {
+                font-size: 1.4em;
+            }
+
+            .cta-button {
+                font-size: 1.4em;
+                padding: 15px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Te invitamos a una celebración muy especial!</h1>
+        <img src="assets/Marie2.jpeg" alt="Marie" />
+    </header>
+
+    <div class="container">
+        <h2>Oriana está celebrando su primer añito♥</h2>
+        <p class="details">
+            Acompáñanos a celebrar el primer año de Oriana, con risas y momentos inolvidables. ¡No te lo puedes perder!
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>Te invitamos</h2>
+        <p class="details">
+            A una fiesta llena de diversión, juegos y mucha alegría. ¡Será un evento inolvidable para toda la familia!
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>Fecha y Hora:</h2>
+        <p class="details">
+            El evento será el <strong>DOMINGO 23 DE MARZO</strong> a las <strong>17:00 HS</strong>.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>Ubicación:</h2>
+        <p class="details">
+            La fiesta tendrá lugar en la calle <strong>SAN RAMÓN N° 314</strong> ENTRE FRANCISCA ARNAL DE ARTIGAS Y SAUCE, LAS PIEDRAS, CANELONES.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>¡Nos encantaría contar contigo en este día tan especial!</h2>
+        <p class="details">
+            Haz clic en el enlace para confirmar tu asistencia por WhatsApp.
+        </p>
+        <a href="https://wa.me/+59898038709?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20cumpleaños%20de%20Oriana." class="cta-button">¡Confirmar Asistencia!</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados. ¡Nos vemos en la fiesta!</p>
+    </footer>
+</body>
+</html>

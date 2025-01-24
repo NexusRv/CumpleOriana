@@ -1,0 +1,191 @@
+/* General body style */
+body {
+    font-family: 'Hello Paris', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2; /* Rosa suave de fondo */
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/Marie fondo.jpeg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Header style */
+header {
+    background: linear-gradient(135deg, #ffb6c1, #fff); /* Rosa claro a blanco */
+    padding: 2rem;
+    border-bottom: 5px solid #f3a3c0;
+    position: relative;
+    opacity: 0;
+    animation: fadeInHeader 1.5s ease-out forwards;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2.5rem; /* Ajustado para adaptarse mejor */
+    color: #ff69b4; /* Rosa fuerte */
+    margin: 0;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.6),
+        -2px -2px 4px rgba(0, 0, 0, 0.6);
+    transform: translateY(60px);
+    animation: slideUp 1.5s ease-out forwards;
+    width: 100%;
+}
+
+/* Image style */
+header img {
+    width: 250px; /* Tamaño reducido para centrado */
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    animation: fadeInImage 1.5s 1s forwards;
+}
+
+/* Container styles */
+.container {
+    max-width: 850px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-translúcido */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(70px);
+    animation: slideUpContainer 1.5s ease-out 2s forwards;
+    margin: 1rem auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Title style */
+h2 {
+    font-size: 2rem;
+    color: #ff69b4;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInHeading 1.5s ease-out 2s forwards;
+    text-align: center;
+}
+
+/* Details text style */
+.details {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #333;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInDetails 1.5s ease-out 2.5s forwards;
+    text-align: center;
+}
+
+/* Subheading style */
+h3 {
+    font-size: 1.8rem;
+    color: #ff69b4;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSubHeading 1.5s ease-out 3s forwards;
+    text-align: center;
+}
+
+/* CTA button style */
+.cta-button {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover, .cta-button:focus {
+    transform: scale(1.05);
+    background-color: #ff85c1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* Footer style */
+footer {
+    margin-top: 1rem;
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInHeader {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(60px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInImage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUpContainer {
+    0% { transform: translateY(70px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInHeading {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDetails {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSubHeading {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .details {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
