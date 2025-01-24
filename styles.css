@@ -3,30 +3,30 @@ body {
     font-family: 'Hello Paris', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffe6f2; /* Rosa suave de fondo */
+    background-color: #ffe6f2;
     color: #555;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('assets/Marie fondo.jpeg'); /* Imagen de fondo */
+    text-align: center;
+    background-image: url('assets/Marie fondo.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-x: hidden; /* Deja esto igual */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    min-height: 100vh; /* Asegura que el body ocupe todo el alto de la pantalla */
 }
+
 
 /* Header style */
 header {
-    background: linear-gradient(135deg, #ffb6c1, #fff); /* Rosa claro a blanco */
-    padding: 2rem;
+    background: linear-gradient(135deg, #ffb6c1, #fff);
+    padding: 50px;
     border-bottom: 5px solid #f3a3c0;
     position: relative;
     opacity: 0;
     animation: fadeInHeader 1.5s ease-out forwards;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    width: 100%; /* Ajusta al 100% del ancho */
 }
 
 header h1 {
@@ -53,17 +53,19 @@ header img {
 
 /* Container styles */
 .container {
+    margin: 0 10px auto;
     max-width: 850px;
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-translúcido */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
     opacity: 0;
     transform: translateY(70px);
     animation: slideUpContainer 1.5s ease-out 2s forwards;
-    margin: 1rem auto;
-    text-align: center;
+    margin-bottom: 40px;
+    width: 90%; /* Ajusta el contenedor para que sea más flexible */
     box-sizing: border-box;
+    text-align: center;
 }
 
 /* Title style */
@@ -169,20 +171,22 @@ footer {
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.8em;
     }
 
     .container {
-        padding: 1.5rem;
+        padding: 30px;
+        max-width: 100%;
+        width: 90%;
     }
 
     .details {
-        font-size: 1rem;
+        font-size: 1.4em;
     }
 
     .cta-button {
-        font-size: 0.9rem;
-        padding: 0.8rem 1.5rem;
+        font-size: 1.4em;
+        padding: 15px 25px;
     }
 
     footer {
