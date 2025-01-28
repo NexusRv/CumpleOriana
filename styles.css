@@ -53,7 +53,6 @@ header h1 {
 /* Image style */
 header img {
     width: 100%; /* Tamaño reducido para centrado */
-    height: auto;
     margin: 20px auto;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
