@@ -20,6 +20,13 @@ body {
     flex-direction: column; /* Para mantener los elementos en una columna */
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
 
 
 /* Header style */
@@ -28,7 +35,8 @@ header {
     width: 100%;
     max-width: 100%;
     height: auto;
-    padding: 5%;
+    min-height: 15vh;
+    padding: 20px 5%;
     border-bottom: 5px solid #f3a3c0;
     position: relative;
     opacity: 0;
@@ -52,7 +60,8 @@ header h1 {
 
 /* Image style */
 header img {
-    width: 100%; /* Tamaño reducido para centrado */
+    max-width: 90%; /* Se ajusta al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones */
     margin: 20px auto;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
@@ -62,9 +71,9 @@ header img {
 
 /* Container styles */
 .container {
-    margin: 5% auto;
+    margin: 20px auto;
     max-width: 100%; /* Asegura que los contenedores se ajusten al ancho del navegador */
-    padding: 10px;
+    padding: 15px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -143,7 +152,7 @@ footer {
 }
 
 @keyframes slideUp {
-    0% { transform: translateY(60px); opacity: 0; }
+    0% { transform: translateY(10px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
 
@@ -177,18 +186,25 @@ footer {
     body {
         display: flex;
         flex-direction: column;
+        background-attachment: scroll;
     }
-
+    header {
+        padding: 10px;
+    }
     header h1 {
         font-size: 2.8em;
     }
 
     .container {
-        padding: 30px;
+        margin: 10px auto;
+        padding: 10px;
         max-width: 100%;
         width: 90%;
     }
-
+    
+    h1, h2 {
+        font-size: 1.8rem;
+    }
     .details {
         font-size: 1.4em;
     }
