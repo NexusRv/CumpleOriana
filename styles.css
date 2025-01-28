@@ -1,3 +1,4 @@
+/* General body style */
 body {
     font-family: 'Hello Paris', cursive, sans-serif;
     margin: 0;
@@ -8,40 +9,51 @@ body {
     background-image: url('assets/Marie fondo.jpeg');
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
-    overflow-x: hidden; /* Esto está bien, pero ajustaremos el vertical */
-    overflow-y: auto; /* Permite el desplazamiento vertical */
+    background-attachment: scroll;
+    overflow-x: hidden; /* Deja esto igual */
+    overflow-y: visible; /* Permite el desplazamiento vertical */
     min-height: 100vh; /* Asegura que el body ocupe todo el alto de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que el body ocupe el 100% de la altura de la pantalla */
+    flex-direction: column; /* Para mantener los elementos en una columna */
 }
 
+
+
+/* Header style */
 header {
     background: linear-gradient(135deg, #ffb6c1, #fff);
-    padding: 50px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 5%;
     border-bottom: 5px solid #f3a3c0;
     position: relative;
     opacity: 0;
     animation: fadeInHeader 1.5s ease-out forwards;
     text-align: center;
-    margin-bottom: 20px;
+    animation-delay: 0s; /* Asegura que el header se muestre sin retraso */
 }
 
+
 header h1 {
-    font-size: 4em;
-    color: #ff69b4;
+    font-size: 4rem; /* Ajustado para adaptarse mejor */
+    color: #ff69b4; /* Rosa fuerte */
     margin: 0;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
-                 -2px -2px 4px rgba(0, 0, 0, 0.6),
-                 2px -2px 4px rgba(0, 0, 0, 0.6),
-                 -2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.6),
+        -2px -2px 4px rgba(0, 0, 0, 0.6);
     transform: translateY(60px);
     animation: slideUp 1.5s ease-out forwards;
     width: 100%;
-    max-width: 100%;
 }
 
+/* Image style */
 header img {
-    width: 400px;
+    width: 100%; /* Tamaño reducido para centrado */
+    height: auto;
     margin: 20px auto;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
@@ -49,24 +61,26 @@ header img {
     animation: fadeInImage 1.5s 1s forwards;
 }
 
+/* Container styles */
 .container {
-    margin: 0 10px auto;
-    max-width: 850px;
+    margin: 5% auto;
+    max-width: 100%; /* Asegura que los contenedores se ajusten al ancho del navegador */
+    padding: 10px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    padding: 20px;
     opacity: 0;
     transform: translateY(70px);
     animation: slideUpContainer 1.5s ease-out 2s forwards;
-    margin-bottom: 40px;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     text-align: center;
 }
 
+
+/* Title style */
 h2 {
-    font-size: 3em;
+    font-size: 2rem;
     color: #ff69b4;
     opacity: 0;
     transform: translateY(30px);
@@ -74,10 +88,11 @@ h2 {
     text-align: center;
 }
 
+/* Details text style */
 .details {
-    font-size: 1.8em;
+    font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
     color: #333;
     opacity: 0;
     transform: translateY(50px);
@@ -85,30 +100,41 @@ h2 {
     text-align: center;
 }
 
+/* Subheading style */
+h3 {
+    font-size: 1.8rem;
+    color: #ff69b4;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSubHeading 1.5s ease-out 3s forwards;
+    text-align: center;
+}
+
+/* CTA button style */
 .cta-button {
     display: inline-block;
     background-color: #ff69b4;
     color: #fff;
-    padding: 18px 35px;
-    font-size: 1.8em;
+    padding: 1rem 2rem;
+    font-size: 1rem;
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, background-color 0.3s;
-    margin-top: 30px;
-    width: auto;
-    text-align: center;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
 }
 
-.cta-button:hover {
+.cta-button:hover, .cta-button:focus {
     transform: scale(1.05);
     background-color: #ff85c1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
 }
 
+/* Footer style */
 footer {
-    margin-top: 40px;
+    margin-top: 1rem;
     color: #777;
-    font-size: 1.3em;
+    font-size: 1rem;
 }
 
 /* Animations */
@@ -142,8 +168,18 @@ footer {
     100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeInSubHeading {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
     header h1 {
         font-size: 2.8em;
     }
@@ -161,5 +197,9 @@ footer {
     .cta-button {
         font-size: 1.4em;
         padding: 15px 25px;
+    }
+
+    footer {
+        font-size: 0.9rem;
     }
 }
