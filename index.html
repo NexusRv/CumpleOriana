@@ -188,6 +188,23 @@
                 padding: 15px 25px;
             }
         }
+        #audio-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #audio-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -235,17 +252,17 @@
     <footer>
         <p>&copy; 2025 Todos los derechos reservados. ¡Nos vemos en la fiesta!</p>
     </footer>
+    <button id="audio-button" onclick="toggleAudio()">🔊 Activar música</button>
+
     <audio id="bg-music" loop>
         <source src="assets/Viva la vida.mp3" type="audio/mpeg">
         Tu navegador no soporta audio.
     </audio>
     
-    <button onclick="toggleAudio()">🔊 Activar música</button>
-    
     <script>
         var audio = document.getElementById("bg-music");
         var audioButton = document.getElementById("audio-button");
-    
+
         function toggleAudio() {
             if (audio.paused) {
                 audio.play().then(() => {
